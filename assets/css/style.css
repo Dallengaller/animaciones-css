@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Desktop Mode */
+.page {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+      "sidebar head"
+      "sidebar main"
+      "foot foot";
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 1fr 6fr;
+  }
+
+  /* HEADER */
+  .page > header {
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8ca0ff;
+  }
+  .navbar {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+  
+  .page > sidebar {
+    grid-area: sidebar;
+    background-color: #ffa08c;
+  }
+  
+  /* MAIN - Galeria */
+  .page > main {
+    grid-area: main;
+    background-color: #ffff64;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column {
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* footer */
+  .page > footer {
+    grid-area: foot;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8cffa0;
+  }
+  
