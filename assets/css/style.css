@@ -30,20 +30,47 @@
     justify-content: space-between;
   }
   
+  /* Sidebar */
+  
   .page > sidebar {
     grid-area: sidebar;
     background-color: #ffa08c;
   }
-  
+  .menu p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    gap: 20px;
+  }
+  .menu ul li {
+    list-style: none;
+    font-size: 30px;
+  }
+
   /* MAIN - Galeria */
   .page > main {
     grid-area: main;
     background-color: #ffff64;
   }
-
+  .foto {
+    height: auto;
+    width: 300px;
+  }
   .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    height: 950px;
   }
   .column {
     border: 1px black solid;
@@ -51,6 +78,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 400px;
   }
   
   /* footer */
