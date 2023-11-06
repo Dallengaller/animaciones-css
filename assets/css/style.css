@@ -67,7 +67,16 @@
     list-style: none;
     font-size: 30px;
   }
-
+  .menu ul li:hover {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.5s ease-out;
+  }
 
   .logo_dan {
     width: 100px;
@@ -89,18 +98,18 @@
  .foto:hover {
     position: relative;
     top: -25px;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.80), 0 15px 12px rgba(0,0,0,0.22);
     transition: all 0.5s ease-out;
   } 
-  .menu ul li:hover {
-    background-color: #333;
-    color: #fff;
-    width: 200px;
-    text-align: center;
-    border: 1px solid;
-    border-radius: 10px;
-    padding: 10px;
-    transition: all 0.5s ease-out;
+  .foto:active {
+    transform: scale(1.5);
+    position: relative;
+    top: 70px;
+  }
+  .fotox:active {
+    transform: scale(1.5);
+    position: relative;
+    top: -5px;
   }
   .row {
     display: flex;
@@ -164,17 +173,81 @@
 
   /* VErsion Mobile 576px*/
 
-  @media (max-width: 576px) {
+  @media (min-width: 375px) and (max-width: 576px) {
     .page {
       display: grid;
-      /* width: 100vw; */
-      /* height: 100vh; */
+
       grid-template-areas:
-        "sidebar"
-        "header"
-        "main"
-        "foot";
-      grid-template-rows: 50px 30px 700px 90px;
-      grid-template-columns: 1fr;
+        "sidebar sidebar"
+        "head head"
+        "main main"
+        "foot foot";
+        grid-template-rows: 85px 50px 570px 70px;
+        grid-template-columns: 1fr
     }
+
+  /* sidebar MENU */
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    gap: 30px;
+  }
+  .logo_dan {
+    border: 1px solid black;
+    width: 45px;
+    height: auto;
+   
+  }
+  .menu ul li {
+    list-style: none;
+    font-size: 20px;
+  }
+  
+  /* header */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+  }
+  
+  .searchbar {
+    display: none;
+  }
+  
+ /* main */
+ .row {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 570px;
+}
+.foto, .menu ul li {
+  pointer-events: none;
+}
+
+
+/* footer */
+.page > footer {
+  grid-area: foot;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding-bottom: 10px;
+  gap: 5px;
+}
+
+
+  }
+
+
