@@ -129,14 +129,14 @@
     transition: all 0.5s ease-out;
   } 
   .foto:active {
-    transform: scale(1.5);
+    transform: scale(1.35);
     position: relative;
-    top: 70px;
+    top: 50px;
   }
   .fotox:active {
-    transform: scale(1.5);
+    transform: scale(1.35);
     position: relative;
-    top: -5px;
+    top: 47px;
   }
   .row {
     display: flex;
@@ -145,7 +145,7 @@
     padding-top: 30px;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    height: 945px;
+    height: 835px;
     column-gap: 15px;
     row-gap: 30px;
   }
