@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    font-family: 'Roboto', sans-serif;
+  }
+
 /* Desktop Mode */
 .page {
     display: grid;
@@ -22,31 +24,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #04090D;
+    background-color: #262625;;
   }
   .navbar {
     display: flex;
     width: 90%;
     justify-content: space-between;
+    align-items: center;
     color: white;
   }
-
+  .iconodrop  {
+    width: 20px;
+    fill: white;
+  }
+  .categorias, .ordenar_por {
+   border: 2px solid #DDDDDD;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 300px;
+   padding-left: 10px;
+  }
   .form input {
     padding-left: 20px;
     border-radius: 10px;
+    border: 2px solid #037fbd;
     width: 400px;
     height: 30px;
   }
   .form button {
     height: 30px;
-    width: 50px;
+    width: 60px;
+    border-radius: 5px;
+    background-color: rgb(193, 193, 193);
   }
   
-  /* Sidebar */
+  /* Sidebar MENU */
   
   .page > sidebar {
     grid-area: sidebar;
-    background-color: #E4CE9D;
+    background-color: #3B3C3E;
   }
 
   .menu {
@@ -64,8 +81,10 @@
     gap: 50px;
   }
   .menu ul li {
+    font-weight: 300;
     list-style: none;
     font-size: 30px;
+    color: #DDDDDD;
   }
   .menu ul li:hover {
     background-color: #333;
@@ -81,6 +100,14 @@
   .logo_dan {
     width: 100px;
     height: auto;
+    animation: color 4s infinite;
+  }
+  @keyframes color {
+    0%   {background: white;}
+    25%  {background: black;}
+    50%  {background: white;}
+    75%  {background: black;}
+    100% {background: white;}
   }
 
   /* MAIN - Galeria */
@@ -146,32 +173,50 @@
  }
  .leyenda h3 {
   padding-bottom: 10px;
+  font-weight: 400;
+}
+.leyenda p {
+  font-weight: 300;
 }
   
   /* footer */
   .page > footer {
     grid-area: foot;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #262625;
+    background-color: #04090D;
     color: white;
+    gap: 50px;
+  }
+  .footer_texto {
+    font-size: 20px;
   }
   .rrss_links {
     width: 30%;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
   }
   .facebook, .instagram, .github {
     width: 30px;
     height: auto;
     fill: white;
   }
+  .facebook:hover {
+    fill: #037fbd;
+  }
+  .instagram:hover {
+    fill: red;
+  }
+  .github:hover {
+    fill: purple;
+  }
+ 
 
 
-  /* VErsion Mobile 576px*/
+  /* Version Mobile 576px*/
 
   @media (min-width: 375px) and (max-width: 576px) {
     .page {
@@ -202,7 +247,6 @@
     gap: 30px;
   }
   .logo_dan {
-    border: 1px solid black;
     width: 45px;
     height: auto;
    
@@ -219,7 +263,9 @@
     justify-content: space-evenly;
     color: white;
   }
-  
+  .categorias, .ordenar_por {
+    width: 200px;
+   }
   .searchbar {
     display: none;
   }
@@ -247,7 +293,19 @@
   gap: 5px;
 }
 
-
+.rrss_links {
+  justify-content: space-around;
+  border-left: none;
+  border-right: none;
+}
+.facebook, .instagram, .github {
+  width: 20px;
+  padding-top: 10px;
+  fill: white;
+}
+.footer_texto {
+  font-size: 15px;
+  font-weight: 300;
+}
   }
-
 
