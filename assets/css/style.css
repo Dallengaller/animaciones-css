@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
   }
+  ::-webkit-scrollbar {  /*oculta el la barra de scroll*/
+    display: none;
+}
 
 /* Desktop Mode */
 .page {
