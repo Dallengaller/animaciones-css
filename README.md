@@ -7,3 +7,4 @@ Animacion con css
 #Intente darle armonia entre las imagenes y el color de la pagina.
 #Para la version mobile, he desactivado estas animaciones. Se incluye un scroll vertical
 #Toda la pagina parte de una sketch realizado con grid y para cada seccion se ajusta con flex.
+#Probando en otro equipo
